@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": ".svelte-kit/cloudflare",
+  "framework": "sveltekit",
+  "routes": [
+    {
+      "pattern": "/*",
+      "script": ".svelte-kit/cloudflare/_worker.js"
+    }
+  ]
+} 

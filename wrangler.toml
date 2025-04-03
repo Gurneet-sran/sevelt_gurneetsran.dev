@@ -1,0 +1,11 @@
+name = "sevelt-gurneetsran-dev"
+compatibility_date = "2024-03-20"
+
+[build]
+command = "pnpm build"
+output_directory = ".svelte-kit/cloudflare"
+
+[site]
+bucket = ".svelte-kit/cloudflare"
+
+pages_build_output_dir = ".svelte-kit/cloudflare" 
