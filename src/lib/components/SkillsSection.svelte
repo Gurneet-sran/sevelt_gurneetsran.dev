@@ -1,6 +1,7 @@
 <script lang="ts">
   import CircularProgress from './CircularProgress.svelte';
-  import LinearProgress from './LinearProgress.svelte';
+  import LinearProgress from './ProgressBar.svelte';
+  import ProgressBullets from './ProgressBullets.svelte';
 </script>
 
 <div class="crt-paper-cont paper-padd clear-mrg">
@@ -24,73 +25,11 @@
         </dl>
       </div>
       <div class=" clear-mrg">
-        <h3 class="title-thin text-muted">languages</h3>
-        <div
-          class="progress-bullets crt-animate"
-          role="progressbar"
-          aria-valuenow="97"
-          aria-valuemin="0"
-          aria-valuemax="10"
-        >
-          <strong class="progress-title">English</strong>
-          <span class="progress-bar">
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet"></span>
-          </span>
-          <span class="progress-text text-muted">native</span>
-        </div>
-        <div
-          class="progress-bullets crt-animate"
-          role="progressbar"
-          aria-valuenow="84"
-          aria-valuemin="0"
-          aria-valuemax="10"
-        >
-          <strong class="progress-title">Spanish</strong>
-          <span class="progress-bar">
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-          </span>
-          <span class="progress-text text-muted">fluent</span>
-        </div>
-        <div
-          class="progress-bullets crt-animate"
-          role="progressbar"
-          aria-valuenow="37"
-          aria-valuemin="0"
-          aria-valuemax="10"
-        >
-          <strong class="progress-title">Italian</strong>
-          <span class="progress-bar">
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet fill"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
-          </span>
-          <span class="progress-text text-muted">beginner</span>
-        </div>
+        <h3 style="font-weight: 300; color: var(--color-text-secondary);">languages</h3>
+        <ProgressBullets progress={60} title="English" text="native"/>
+        <ProgressBullets progress={84} title="Spanish" text="fluent"/>
+        <ProgressBullets progress={37} title="Italian" text="beginner"/>
+       
       </div>
     </div>
     <!-- .row -->
@@ -145,3 +84,52 @@
     <!-- .row -->
   </section>
 </div>
+
+<style>
+  .skills {
+    padding: 2rem 0;
+  }
+
+  .skills__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .skills__title {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .skills__subtitle {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+  }
+
+  .skills__container {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .skills__content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .skills__group {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .skills__data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .skills__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

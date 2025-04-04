@@ -23,7 +23,7 @@
 			<path d="M 0,2 L 100,2" stroke="rgba(0,0,0,0.07)" stroke-width="4" fill-opacity="0" class="progress__track"></path>
 			<path
 				d="M 0,2 L 100,2"
-				stroke="#1FA184"
+				stroke="var(--color-primary)"
 				stroke-width="4"
 				fill-opacity="0"
 				style="stroke-dasharray: 100, 100; stroke-dashoffset: {offset};"
