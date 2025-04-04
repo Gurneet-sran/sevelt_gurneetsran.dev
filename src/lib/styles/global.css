@@ -1,3 +1,62 @@
+/* Reset Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Armata', sans-serif;
+  line-height: 1.4em;
+  letter-spacing: .08em;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Font Definitions */
 @font-face {
   font-family: 'Aldrich';
@@ -26,81 +85,46 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
-.gs-logo {
-  font-family: 'Pacifico', sans-serif;
-}
-
-body {
-  font-family: 'Armata', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Container Classes */
+/* Container Classes - Mobile First */
 .container {
   width: 100%;
-  max-width: 1200px;
+  padding: 0 1rem;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
-.container-sm {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 15px;
+.container--sm {
+  max-width: 540px;
 }
 
-/* Text Alignment */
-.text-left {
-  text-align: left;
-}
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* Responsive Visibility */
-@media (max-width: 767px) {
-  .hidden-xs {
-    display: none !important;
+  .container--sm {
+    max-width: 540px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .hidden-sm {
-    display: none !important;
+/* Desktop Styles (992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .container--sm {
+    max-width: 720px;
   }
 }
 
-/* List Utilities */
-.clear-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+/* Large Desktop Styles (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-icon {
-  padding: 8px;
-  background: transparent;
-}
-
-.btn-shade {
-  background-color: var(--color-shade);
-  color: var(--color-text);
+  .container--sm {
+    max-width: 960px;
+  }
 }

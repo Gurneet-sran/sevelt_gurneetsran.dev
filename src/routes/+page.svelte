@@ -1,16 +1,33 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import AvatarCard from '$lib/components/AvatarCard.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Section from '$lib/components/Section.svelte';
+	import SkillsSection from '$lib/components/SkillsSection.svelte';
 </script>
 
 <Header />
-
+<AvatarCard />
 <main>
 	<Section id="about" title="About Me">
 		<!-- About content will go here -->
 		<div class="about-content">
-			<p>Your introduction and about me content will go here.</p>
+			<p>
+				Hello, I’m Robert Smith
+			</p>
+			<p>
+				Senior Web Developer specializing in front end development.
+				Experienced with all stages of the development cycle for dynamic web projects. Well-versed
+				in numerous programming languages including JavaScript, SQL, and C. Stng background in
+				project management and customer relations.
+			</p>
+		</div>
+	</Section>
+
+	<Section id="skills" title="Skills">
+		<!-- Skills content will go here -->
+		<div class="skills-content">
+			<SkillsSection />
 		</div>
 	</Section>
 
@@ -28,12 +45,7 @@
 		</div>
 	</Section>
 
-	<Section id="skills" title="Skills">
-		<!-- Skills content will go here -->
-		<div class="skills-content">
-			<p>Your skills content will go here.</p>
-		</div>
-	</Section>
+	
 
 	<Section id="contact" title="Contact">
 		<!-- Contact content will go here -->
@@ -60,7 +72,7 @@
 		display: inline-block;
 		margin-top: 1rem;
 		padding: 0.5rem 1rem;
-		background-color: #4CAF50;
+		background-color: #4caf50;
 		color: white;
 		text-decoration: none;
 		border-radius: 4px;

@@ -1,98 +1,137 @@
 <script lang="ts">
-	import ThemeToggle from './ThemeToggle.svelte';
+	import SideMenu from './SideMenu.svelte';
+	import Nav from './Nav.svelte';
+
+	let isMenuOpen = false;
+
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
 </script>
 
 <header class="header">
-	<div class="header-content">
-		<div class="container-sm">
-			<div class="head-row">
-				<div class="head-col text-left">
-					<div class="logo">
-						<span class="gs-logo">Gurneet Sran</span>
+	<div class="header__content">
+			<div class="container container--sm header__row">
+				<div class="header__col">
+					<div class="header__logo">
+						<span class="header__logo-text">Gurneet Sran</span>
 					</div>
 				</div>
 
-				<div  class="head-col text-right">
-					<div class="nav-container container hidden-sm hidden-xs">
-						<nav>
-							<ul class="clear-list">
-								<li class="menu-item" >
-									<a href="https://certy.px-lab.com/developer/" aria-current="page">Home</a>
-								</li>
-								<li class="menu-item" >
-									<a href="https://certy.px-lab.com/developer/blog/">Blog</a>
-								</li>
-							</ul>
-						</nav>
+				<div class="header__col header__col--nav">
+					<div class="header__nav header__nav--desktop">
+						<Nav />
 					</div>
 				</div>
 
-				<div  class="head-col text-right">
-					<!-- svelte-ignore a11y_consider_explicit_label -->
-					<button class="btn btn-icon btn-shade">
-						<span class="gs-icon gs-icon-side-bar"></span>
+				<div class="header__col">
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
+					<button class="header__menu-btn" on:click={toggleMenu} aria-label="Toggle menu">
+						<span class="icon icon--menu"></span>
 					</button>
 				</div>
 			</div>
-		</div>
-
-		<!-- <div class="header-actions">
-			<ThemeToggle />
-		</div> -->
 	</div>
+  <Nav />
+  
 </header>
+
+<SideMenu bind:isOpen={isMenuOpen} />
 
 <style>
 	.header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: var(--color-background);
+		background: var(--color-surface);
 		border-bottom: 1px solid var(--color-border);
-		z-index: 100;
 		padding: 1rem 0;
+    padding-bottom: 0;
 	}
 
-	.header-content {
+	.header__content {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 2rem;
 		display: flex;
 		align-items: center;
+	}
+
+	.header__row {
+		display: flex;
+		gap: 1rem;
+		padding: 0 1rem;
 		justify-content: space-between;
 	}
 
-	.logo {
+	.header__col {
+		width: 100%;
+		padding: 0;
+	}
+
+  .header__col:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+	.header__col--nav {
+		display: none;
+	}
+
+	.header__logo {
 		font-size: 1.5rem;
 		color: var(--color-primary);
 	}
 
-	.nav {
-		display: flex;
-		gap: 2rem;
+	.header__logo-text {
+		font-family: 'Pacifico', sans-serif;
 	}
 
-	.nav-link {
-		color: var(--color-text);
-		text-decoration: none;
-		font-weight: var(--font-weight-medium);
-		transition: color 0.3s ease;
+	.header__nav {
+		display: none;
 	}
 
-	.nav-link:hover {
-		color: var(--color-primary);
+	.header__nav--desktop {
+		display: block;
 	}
 
-	.header-actions {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
+	/* Button Styles */
+	.header__menu-btn {
+		display: inline-block;
+		padding: 0 .5rem;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		font-size: 2rem;
+    color: var(--color-text);
+    &:hover {
+      color: var(--color-primary);
+    }
 	}
 
-	@media (max-width: 768px) {
-		.nav {
-			display: none;
+	/* Tablet Styles (768px and up) */
+	@media (min-width: 768px) {
+		.header__row {
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 -0.75rem;
+		}
+
+		.header__col {
+			padding: 0 0.75rem;
+			flex: 1;
+		}
+
+		.header__col--nav {
+			display: block;
+		}
+	}
+
+	/* Desktop Styles (992px and up) */
+	@media (min-width: 992px) {
+		.header__row {
+			margin: 0 -1rem;
+		}
+
+		.header__col {
+			padding: 0 1rem;
 		}
 	}
 </style>
