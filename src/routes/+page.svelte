@@ -1,11 +1,58 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import AvatarCard from '$lib/components/AvatarCard.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Section from '$lib/components/Section.svelte';
+	import SkillsSection from '$lib/components/SkillsSection.svelte';
 </script>
 
-<main class="container">
-	<h1>Hello World</h1>
-	<p>Welcome to my SvelteKit site!</p>
-	<a href="/admin-login">Admin Login</a>
+<Header />
+<AvatarCard />
+<main>
+	<Section id="about" title="About Me">
+		<!-- About content will go here -->
+		<div class="about-content">
+			<p>
+				Hello, I’m Robert Smith
+			</p>
+			<p>
+				Senior Web Developer specializing in front end development.
+				Experienced with all stages of the development cycle for dynamic web projects. Well-versed
+				in numerous programming languages including JavaScript, SQL, and C. Stng background in
+				project management and customer relations.
+			</p>
+		</div>
+	</Section>
+
+	<Section id="skills" title="Skills">
+		<!-- Skills content will go here -->
+		<div class="skills-content">
+			<SkillsSection />
+		</div>
+	</Section>
+
+	<Section id="experience" title="Experience">
+		<!-- Experience content will go here -->
+		<div class="experience-content">
+			<p>Your experience content will go here.</p>
+		</div>
+	</Section>
+
+	<Section id="projects" title="Projects">
+		<!-- Projects content will go here -->
+		<div class="projects-content">
+			<p>Your projects content will go here.</p>
+		</div>
+	</Section>
+
+	
+
+	<Section id="contact" title="Contact">
+		<!-- Contact content will go here -->
+		<div class="contact-content">
+			<p>Your contact information will go here.</p>
+		</div>
+	</Section>
 </main>
 
 <style>
@@ -25,7 +72,7 @@
 		display: inline-block;
 		margin-top: 1rem;
 		padding: 0.5rem 1rem;
-		background-color: #4CAF50;
+		background-color: #4caf50;
 		color: white;
 		text-decoration: none;
 		border-radius: 4px;
@@ -33,5 +80,17 @@
 
 	a:hover {
 		background-color: #45a049;
+	}
+
+	main {
+		padding-top: 5rem; /* Space for fixed header */
+	}
+
+	.about-content,
+	.experience-content,
+	.projects-content,
+	.skills-content,
+	.contact-content {
+		color: var(--color-text);
 	}
 </style>

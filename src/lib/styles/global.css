@@ -1,0 +1,130 @@
+/* Reset Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Armata', sans-serif;
+  line-height: 1.4em;
+  letter-spacing: .08em;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Font Definitions */
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/fonts/Aldrich-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Armata';
+  src: url('/fonts/Armata-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Aldrich', sans-serif;
+  color: var(--color-text);
+}
+
+/* Container Classes - Mobile First */
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.container--sm {
+  max-width: 540px;
+}
+
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .container--sm {
+    max-width: 540px;
+  }
+}
+
+/* Desktop Styles (992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .container--sm {
+    max-width: 720px;
+  }
+}
+
+/* Large Desktop Styles (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .container--sm {
+    max-width: 960px;
+  }
+}
