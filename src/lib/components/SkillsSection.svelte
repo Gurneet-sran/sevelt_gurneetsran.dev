@@ -11,17 +11,17 @@
         <h3 class="title-thin text-muted">personal information</h3>
         <dl class="dl-horizontal clear-mrg">
           <dt class="text-upper">Full Name</dt>
-          <dd>Robert Smith</dd>
+          <dd>GURNEET SINGH</dd>
           <dt class="text-upper">D.o.b.</dt>
-          <dd>05 June 1988</dd>
+          <dd>05 June 6969</dd>
           <dt class="text-upper">address</dt>
-          <dd>24058, Belgium, Brussels, Liutte 27, BE</dd>
+          <dd>1234 Street, City, State, Zip</dd>
           <dt class="text-upper">e-mail</dt>
-          <dd>robertsmith@company.com</dd>
+          <dd>example@example.com</dd>
           <dt class="text-upper">phone</dt>
-          <dd>+1 256 254 84 56</dd>
+          <dd>+1 123 456 7890</dd>
           <dt class="text-upper">freelance</dt>
-          <dd>till March 25, 2016</dd>
+          <dd>Available</dd>
         </dl>
       </div>
       <div class=" clear-mrg">
