@@ -4,8 +4,8 @@
   import ProgressBullets from './ProgressBullets.svelte';
 </script>
 
-<div class="crt-paper-cont paper-padd clear-mrg">
-  <section id="skills" class="section padd-box brd-btm">
+<div class="">
+  <section id="skills" class="section">
     <div class="row">
       <div class=" clear-mrg">
         <h3 class="title-thin text-muted">personal information</h3>
