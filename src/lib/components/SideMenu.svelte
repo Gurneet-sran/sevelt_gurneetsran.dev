@@ -3,6 +3,7 @@
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Nav from './Nav.svelte';
+	import ThemeToggle from './ThemeToggle.svelte';
 
 	export let isOpen = false;
 	let isClosing = false;
@@ -46,25 +47,25 @@
 <svelte:window on:keydown={handleKeydown} />
 
 {#if isOpen}
-	<div 
-		class="sidemenu-overlay" 
-		on:click={closeMenu} 
+	<div
+		class="sidemenu-overlay"
+		on:click={closeMenu}
 		on:keydown={handleKeydown}
 		role="dialog"
 		aria-modal="true"
 		aria-label="Navigation menu"
 		transition:fade={{ duration: 450 }}
 	>
-		<div 
-			class="sidemenu" 
-			class:closing={isClosing} 
+		<div
+			class="sidemenu"
+			class:closing={isClosing}
 			on:click|stopPropagation
 			role="menu"
 			bind:this={menuElement}
 		>
 			<div class="sidemenu__header">
-				<button 
-					class="sidemenu__close-btn" 
+				<button
+					class="sidemenu__close-btn"
 					on:click={closeMenu}
 					on:keydown={handleKeydown}
 					aria-label="Close menu"
@@ -75,6 +76,7 @@
 			</div>
 
 			<div class="sidemenu__content">
+				<ThemeToggle />
 			</div>
 		</div>
 	</div>
@@ -98,7 +100,7 @@
 		width: 100%;
 		max-width: 300px;
 		height: 100%;
-		background-color: var(--color-surface);
+		background-color: var(--color-background);
 		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 		z-index: 1001;
 		padding: 1rem;
@@ -158,4 +160,4 @@
 			max-width: 400px;
 		}
 	}
-</style> 
+</style>
