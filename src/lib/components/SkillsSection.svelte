@@ -188,7 +188,7 @@
 	} */
 
 	/* Tablet layout */
-	@media (min-width: 768px) {
+	@media (min-width: 576px) {
 		.skills__row .skills__item:last-child {
 			display: none !important;
 			visibility: hidden;
@@ -205,9 +205,15 @@
 
 		.skills__row {
 			display: flex;
-			flex-direction: row;
+			flex-wrap: nowrap;
 			gap: 1rem;
-			justify-content: center;
+			justify-content: space-between;
+		}
+
+		.skills__item {
+			flex: 1;
+			width: 0;
+			text-align: center;
 		}
 	}
 </style>

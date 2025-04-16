@@ -1,10 +1,12 @@
 <script lang="ts">
-  import '$lib/styles/global.css';
-  import '$lib/styles/variables.css';
-  import '$lib/styles/icons.css';
+	import '$lib/styles/global.css';
+	import '$lib/styles/variables.css';
+	import '$lib/styles/icons.css';
+	import type { Snippet } from 'svelte';
+	let { children } = $props<{ children: Snippet }>();
 </script>
 
-<slot /> 
+{@render children?.()}
 <!-- <svg id="crtBgShape1" class="hidden-sm hidden-xs" height="519" width="758">
   <polygon class="pol" points="0,455,693,352,173,0,92,0,0,71"></polygon>
 </svg>

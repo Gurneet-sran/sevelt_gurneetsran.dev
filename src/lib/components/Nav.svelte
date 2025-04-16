@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let className: string = '';
+	let { className } = $props<{ className?: string }>();
 </script>
 
 <nav class="nav {className}">
@@ -19,15 +19,15 @@
 			</a>
 		</li>
 		<li class="nav__item">
-			<a href="#exp" class="nav__link" aria-label="Experience" data-tooltip="Experience">
+			<a href="#experience" class="nav__link" aria-label="Experience" data-tooltip="Experience">
 				<span class="nav__icon icon icon--experience"></span>
 			</a>
 		</li>
-		<li class="nav__item">
+		<!-- <li class="nav__item">
 			<a href="#ref" class="nav__link" aria-label="References" data-tooltip="References">
 				<span class="nav__icon icon icon--references"></span>
 			</a>
-		</li>
+		</li> -->
 		<li class="nav__item">
 			<a href="#blog" class="nav__link" aria-label="Blog" data-tooltip="Blog">
 				<span class="nav__icon icon icon--blog"></span>
@@ -45,7 +45,6 @@
 	.nav {
 		display: flex;
 		padding: 0.75rem 1rem;
-		margin-top: 0.75rem;
 		flex-direction: row;
 		background-color: var(--color-background);
 	}

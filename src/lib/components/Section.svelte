@@ -1,12 +1,18 @@
 <script lang="ts">
-	export let title: string;
-	export let id: string;
+	import type { Snippet } from 'svelte';
+	let { children, title, id } = $props<{
+		children?: Snippet;
+		title?: string;
+		id: string;
+	}>();
 </script>
 
 <section {id} class="section">
-	<h2 class="section__title">{title}</h2>
+	{#if title}
+		<h2 class="section__title">{title}</h2>
+	{/if}
 	<div class="section__content">
-		<slot />
+		{@render children?.()}
 	</div>
 </section>
 
@@ -18,9 +24,9 @@
 
 	.section__title {
 		font-size: 2rem;
-		margin-bottom: 2rem;
-		text-align: center;
+		margin-bottom: 3.12rem;
 		color: var(--color-text);
+		text-transform: uppercase;
 	}
 
 	.section__content {

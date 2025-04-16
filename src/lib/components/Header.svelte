@@ -11,7 +11,7 @@
 
 <header class="header">
 	<div class="header__content">
-		<div class="container container--sm header__row">
+		<div class="header__row">
 			<div class="header__col">
 				<div class="header__logo">
 					<span class="header__logo-text">Gurneet Sran</span>
@@ -40,23 +40,25 @@
 	.header {
 		background: var(--color-surface);
 		border-bottom: 1px solid var(--color-border);
-		padding: 1rem 0;
-		padding-bottom: 0;
+		padding: 1rem;
 	}
 
 	.header__content {
 		/* max-width: 1200px; */
 		max-width: 1440px;
 		margin: 0 auto;
-		display: flex;
 		align-items: center;
+		display: flex;
+		/* padding: 0 1rem; */
+		flex-direction: row;
 	}
 
 	.header__row {
 		display: flex;
+		width: 100%;
 		gap: 1rem;
 		padding: 0 1rem;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	.header__col {
@@ -80,6 +82,7 @@
 
 	.header__logo-text {
 		font-family: 'Pacifico', sans-serif;
+		white-space: nowrap;
 	}
 
 	.header__nav {

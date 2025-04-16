@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ThemeToggle from './ThemeToggle.svelte';
 	export let className: string = '';
 </script>
 
