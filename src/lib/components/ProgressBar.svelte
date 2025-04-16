@@ -13,14 +13,21 @@
 	aria-valuemin="0"
 	aria-valuemax="100"
 >
-	<strong class="progress__title">{title}</strong>
-	<div
-		class="progress__bar"
-		data-text="{progress}%"
-		data-value={progress / 100}
-	>
+	<div class="progress__row">
+		<strong class="progress__title">{title}</strong>
+		<div class="progress__text">
+			{progress}%
+		</div>
+	</div>
+	<div class="progress__bar" data-text="{progress}%" data-value={progress / 100}>
 		<svg viewBox="0 0 100 4" preserveAspectRatio="none" class="progress__svg">
-			<path d="M 0,2 L 100,2" stroke="rgba(0,0,0,0.07)" stroke-width="4" fill-opacity="0" class="progress__track"></path>
+			<path
+				d="M 0,2 L 100,2"
+				stroke="rgba(0,0,0,0.07)"
+				stroke-width="4"
+				fill-opacity="0"
+				class="progress__track"
+			></path>
 			<path
 				d="M 0,2 L 100,2"
 				stroke="var(--color-primary)"
@@ -30,9 +37,6 @@
 				class="progress__fill"
 			></path>
 		</svg>
-		<div class="progress__text">
-			{progress}%
-		</div>
 	</div>
 </div>
 
@@ -41,16 +45,23 @@
 		margin-bottom: 1.5rem;
 	}
 
+	.progress__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: end;
+		margin-bottom: 0.3rem;
+	}
+
 	.progress__title {
 		display: block;
-		margin-bottom: 0.5rem;
-		font-size: 0.9rem;
+		font-size: 0.85em;
 		color: var(--color-text-secondary);
 	}
 
 	.progress__bar {
 		position: relative;
-		height: 8px;
+		height: 5px;
 		background-color: transparent;
 		border-radius: 4px;
 	}
@@ -60,7 +71,7 @@
 		height: 100%;
 	}
 
-	.progress__text {
+	/* .progress__text {
 		font-size: 0.9rem;
 		font-weight: bold;
 		top: -25px;
@@ -70,5 +81,5 @@
 		margin: 0px;
 		padding: 0px;
 		transform: translate(0px, 0px);
-	}
+	} */
 </style>

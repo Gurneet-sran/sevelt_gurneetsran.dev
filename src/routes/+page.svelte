@@ -40,7 +40,7 @@
 
 		<Section id="interests" title="Interests">
 			<div class="interests-content">
-				<ul class="">
+				<ul class="interests-list">
 					<li>
 						<span class="icon icon--animal-lover"></span>
 						Animals
@@ -155,8 +155,17 @@
 		}
 	}
 
+	/* Tablet layout */
+	@media (min-width: var(--screen-md)) {
+		.interests-list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+			justify-items: center;
+		}
+	}
 	/* Desktop and laptop layout */
-	@media (min-width: 992px) {
+	@media (min-width: var(--screen-lg)) {
 		.page-grid {
 			grid-template-columns: var(--page-grid-template);
 			grid-template-areas: 'side main nav';
@@ -166,6 +175,9 @@
 
 		main {
 			padding-top: 0;
+			display: flex;
+			gap: 0.95rem;
+			flex-direction: column;
 		}
 	}
 </style>
