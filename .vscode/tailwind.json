@@ -22,16 +22,6 @@
 			]
 		},
 		{
-			"name": "@responsive",
-			"description": "You can generate responsive variants of your own classes by wrapping their definitions in the `@responsive` directive:\n```css\n@responsive {\n  .alert {\n    background-color: #E53E3E;\n  }\n}\n```\n",
-			"references": [
-				{
-					"name": "Tailwind Documentation",
-					"url": "https://tailwindcss.com/docs/functions-and-directives#responsive"
-				}
-			]
-		},
-		{
 			"name": "@screen",
 			"description": "The `@screen` directive allows you to create media queries that reference your breakpoints by **name** instead of duplicating their values in your own CSS:\n```css\n@screen sm {\n  /* ... */\n}\n```\n…gets transformed into this:\n```css\n@media (min-width: 640px) {\n  /* ... */\n}\n```\n",
 			"references": [
@@ -48,16 +38,6 @@
 				{
 					"name": "Tailwind Documentation",
 					"url": "https://tailwindcss.com/docs/functions-and-directives#variants"
-				}
-			]
-		},
-		{
-			"name": "@custom-media",
-			"description": "Use the `@custom-media` directive to create custom media queries that reference your breakpoints by **name** instead of duplicating their values in your own CSS:\n```css\n@custom-media --screen-sm (min-width: 640px);\n```\n",
-			"references": [
-				{
-					"name": "Tailwind Documentation",
-					"url": "https://tailwindcss.com/docs/functions-and-directives#custom-media"
 				}
 			]
 		}

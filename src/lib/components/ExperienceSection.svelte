@@ -1,12 +1,11 @@
 <section id="exp" class="section padd-box brd-btm">
-	<!-- <h2 class="title-lg text-upper">work experience</h2> -->
-	<div class="education">
-		<div class="education-box">
-			<span class="education-date">
+	<div class="experience">
+		<div class="experience__box">
+			<span class="experience__date">
 				<span>Feb 2023 - Present</span>
 			</span>
-			<h3>CITIZENS BANK</h3>
-			<div class="education-logo">
+			<h3 class="experience__title">CITIZENS BANK</h3>
+			<div class="experience__logo">
 				<img
 					src="/images/citizens-bank-logo.svg"
 					alt=""
@@ -15,9 +14,9 @@
 				/>
 			</div>
 
-			<!-- <span class="company-name">Loft Studio</span> -->
+			<!-- <span class="company-name"></span> -->
 
-			<p>
+			<p class="experience__description">
 				Led front-end development of a critical banking dashboard at Citizens Bank, utilizing React,
 				Redux, and micro front-end architecture to enhance operational efficiency. Optimized
 				performance for large datasets, achieving an 80% improvement in rendering speed. Spearheaded
@@ -25,29 +24,29 @@
 				and technical guidance to the team, ensuring successful project delivery.
 			</p>
 		</div>
-		<div class="education-box">
-			<span class="education-date">
+		<div class="experience__box">
+			<span class="experience__date">
 				<span>Jun 2021 - Feb 2023</span>
 			</span>
-			<h3>J.P. Morgan / Senior Frontend Develope</h3>
-			<div class="education-logo">
+			<h3 class="experience__title">J.P. Morgan / Senior Frontend Develope</h3>
+			<div class="experience__logo">
 				<img src="/images/J_P_Morgan_Chase.svg" alt="JPMorgan" width="100px" />
 			</div>
-			<!-- <span class="company-name">Noemi Productions LTD</span> -->
+			<!-- <span class="company-name"></span> -->
 
-			<p>
+			<p class="experience__description">
 				Developed user interface solutions for client due diligence workflows at JPMorgan Chase,
 				using React, TypeScript, and related technologies. Focused on creating user-friendly and
 				efficient applications, collaborating closely with product teams. Ensured cross-browser
 				compatibility and adherence to accessibility standards.
 			</p>
 		</div>
-		<div class="education-box">
-			<span class="education-date">
+		<div class="experience__box">
+			<span class="experience__date">
 				<span>May 2018 - Jun 2021</span>
 			</span>
-			<h3>Virtusa / Frontend Developer</h3>
-			<div class="education-logo">
+			<h3 class="experience__title">Virtusa / Frontend Developer</h3>
+			<div class="experience__logo">
 				<a href="https://www.virtusa.com/">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -103,25 +102,25 @@
 					</svg>
 				</a>
 			</div>
-			<!-- <span class="company-name">Noemi Productions LTD</span> -->
+			<!-- <span class="company-name"></span> -->
 
-			<p>
+			<p class="experience__description">
 				Contributed to frontend development for enterprise projects using Angular, TypeScript, and
 				Webpack, including dynamic network planning tools and scalable microservice-based SaaS
 				platforms.
 			</p>
 		</div>
-		<div class="education-box">
-			<span class="education-date">
+		<div class="experience__box">
+			<span class="experience__date">
 				<span>Mar 2017 - May 2018</span>
 			</span>
-			<h3>Talocity Inc / UI/UX Developer</h3>
-			<div class="education-logo">
+			<h3 class="experience__title">Talocity Inc / UI/UX Developer</h3>
+			<div class="experience__logo">
 				<img src="/images/talocity_logo_white.png" alt="Talocity" width="100px" />
 			</div>
-			<!-- <span class="company-name">Boombox Group</span> -->
+			<!-- <span class="company-name"></span> -->
 
-			<p>
+			<p class="experience__description">
 				Designed and developed the candidate video recording interface for Talocity's AI-driven
 				video interviewing platform. Implemented features that utilized candidate video and audio
 				devices for interview recording, and integrated WebRTC for real-time media streaming to the
@@ -129,17 +128,17 @@
 				contributing to the platform's core UI functionality.
 			</p>
 		</div>
-		<div class="education-box">
-			<span class="education-date">
+		<div class="experience__box">
+			<span class="experience__date">
 				<span>Jan 2016 - Mar 2017</span>
 			</span>
-			<h3>Miracle Studios / Front End Developer</h3>
-			<div class="education-logo">
+			<h3 class="experience__title">Miracle Studios / Front End Developer</h3>
+			<div class="experience__logo">
 				<img src="/images/Miracle-Studios.jpg" alt="Miracle Studios" width="100px" />
 			</div>
-			<!-- <span class="company-name">Boombox Group</span> -->
+			<!-- <span class="company-name"></span> -->
 
-			<p>
+			<p class="experience__description">
 				Translated complex PDF designs from designers into pixel-perfect, responsive websites and
 				themes compatible with various CMS platforms, including WordPress, Drupal, and Magento.
 				Ensured cross-browser compatibility and optimized front-end performance for diverse client
@@ -151,14 +150,11 @@
 </section>
 
 <style>
-	p {
-		font-size: 0.875em;
-	}
-	.education {
+	.experience {
 		position: relative;
 	}
 
-	.education:before {
+	.experience:before {
 		top: 10px;
 		left: 0;
 		bottom: 0;
@@ -168,31 +164,35 @@
 		position: absolute;
 		background: var(--color-primary-dark);
 	}
-	.education-box {
+
+	.experience__box {
 		position: relative;
 		padding-left: 20px;
 		margin-bottom: 45px;
-		&::before {
-			content: '';
-			top: 9px;
-			left: -1px;
-			position: absolute;
-			width: 4px;
-			height: 4px;
-			border-radius: 50%;
-			background-color: var(--color-text);
-		}
-		&:last-child:after {
-			top: 14px;
-			left: 0;
-			bottom: 0;
-			width: 2px;
-			content: '';
-			position: absolute;
-			background-color: var(--color-surface);
-		}
 	}
-	.education-date {
+
+	.experience__box::before {
+		content: '';
+		top: 9px;
+		left: -1px;
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: var(--color-text);
+	}
+
+	.experience__box:last-child:after {
+		top: 14px;
+		left: 0;
+		bottom: 0;
+		width: 2px;
+		content: '';
+		position: absolute;
+		background-color: var(--color-surface);
+	}
+
+	.experience__date {
 		background: var(--color-primary-dark);
 		left: -20px;
 		width: 117px;
@@ -203,44 +203,42 @@
 		font-size: 0.625em;
 		position: relative;
 		display: inline-block;
-		&:before {
-			content: '';
-			top: 0;
-			right: 100%;
-			width: 0;
-			height: 0;
-			position: absolute;
-			border-top: 11px solid transparent !important;
-			border-bottom: 11px solid transparent !important;
-			border-left: 0 solid transparent !important;
-			border-right: 7px solid transparent;
-			border-color: var(--color-primary-dark);
-		}
-	}
-	.company-name {
-		line-height: 1.1;
-		letter-spacing: 0;
-		font-size: 1em;
-		margin-bottom: 15px;
-		display: inline-block;
-		color: var(--color-text-tertiary);
 	}
 
-	.education-box h3 {
+	.experience__date:before {
+		content: '';
+		top: 0;
+		right: 100%;
+		width: 0;
+		height: 0;
+		position: absolute;
+		border-top: 11px solid transparent !important;
+		border-bottom: 11px solid transparent !important;
+		border-left: 0 solid transparent !important;
+		border-right: 7px solid transparent;
+		border-color: var(--color-primary-dark);
+	}
+
+	.experience__title {
 		letter-spacing: 0;
 		font-size: 0.938em;
 		margin-top: 15px;
 	}
-	.education-box h3,
-	.education-logo {
+
+	.experience__logo {
 		margin-bottom: 10px;
 	}
 
+	.experience__description {
+		font-size: 0.875em;
+	}
+
 	@media (min-width: 768px) {
-		.education {
+		.experience {
 			margin-left: 210px;
 		}
-		.education-date {
+
+		.experience__date {
 			margin-left: 0;
 			margin-right: 22px;
 			padding: 8px 6px;
@@ -251,17 +249,18 @@
 			right: 100%;
 			left: auto;
 			top: -4px;
-			&:before {
-				top: 0;
-				left: 100%;
-				width: 0;
-				height: 0;
-				position: absolute;
-				border-top: 16px solid transparent !important;
-				border-bottom: 16px solid transparent !important;
-				border-right: 10px solid transparent !important;
-				border-left: 10px solid var(--color-primary-dark) !important;
-			}
+		}
+
+		.experience__date:before {
+			top: 0;
+			left: 100%;
+			width: 0;
+			height: 0;
+			position: absolute;
+			border-top: 16px solid transparent !important;
+			border-bottom: 16px solid transparent !important;
+			border-right: 10px solid transparent !important;
+			border-left: 10px solid var(--color-primary-dark) !important;
 		}
 	}
 </style>

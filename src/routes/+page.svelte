@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import AvatarCard from '$lib/components/AvatarCard.svelte';
 	import ExperienceSection from '$lib/components/ExperienceSection.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -18,15 +17,17 @@
 			<div class="about-content">
 				<p>Hello, I'm Gurneet Singh</p>
 				<p>
-					Senior Web Developer specializing in front end development. Experienced with all stages of
-					the development cycle for dynamic web projects. Well-versed in numerous programming
-					languages including JavaScript, SQL, and C. Stng background in project management and
-					customer relations.
+					Highly motivated Frontend Engineer with 9+ years of experience specializing in developing
+					and optimizing user-centric, mobile-first web applications. Proven ability to architect
+					scalable solutions using React, TypeScript, and modern frontend technologies. Strong
+					emphasis on performance optimization, accessibility, and collaboration within agile
+					environments. Passionate about delivering high-quality user experiences and building
+					maintainable, efficient applications.
 				</p>
 			</div>
 		</Section>
 
-		<Section id="skills" title="Skills">
+		<Section id="skills">
 			<div class="skills-content">
 				<SkillsSection />
 			</div>
@@ -83,14 +84,14 @@
 	</main>
 </div>
 
-<style>
-	.container {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 2rem;
-		text-align: center;
-	}
+<!-- <svg id="crtBgShape1" class="hidden-sm hidden-xs" height="519" width="758">
+	<polygon class="pol" points="0,455,693,352,173,0,92,0,0,71"></polygon>
+</svg>
+<svg id="crtBgShape2" class="hidden-sm hidden-xs" height="536" width="633">
+	<polygon points="0,0,633,0,633,536"></polygon>
+</svg> -->
 
+<style>
 	.page-grid {
 		display: grid;
 		width: 100%;
@@ -156,16 +157,15 @@
 	}
 
 	/* Tablet layout */
-	@media (min-width: var(--screen-md)) {
+	@media (min-width: 768px) {
 		.interests-list {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 1rem;
-			justify-items: center;
 		}
 	}
 	/* Desktop and laptop layout */
-	@media (min-width: var(--screen-lg)) {
+	@media (min-width: 992px) {
 		.page-grid {
 			grid-template-columns: var(--page-grid-template);
 			grid-template-areas: 'side main nav';
@@ -178,6 +178,34 @@
 			display: flex;
 			gap: 0.95rem;
 			flex-direction: column;
+		}
+		.page-grid::before {
+			content: '';
+			inset: 0;
+			background: var(--color-background);
+			clip-path: polygon(0 87.7%, 91.4% 67.8%, 22.8% 0, 12.1% 0, 0 13.7%);
+			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+			z-index: -1;
+			height: 519px;
+			width: 758px;
+			top: 0;
+			position: fixed;
+			z-index: -1;
+		}
+
+		.page-grid::after {
+			content: '';
+			position: fixed;
+			inset: 0;
+			background: var(--color-primary);
+			clip-path: polygon(0 0, 100% 0, 100% 100%);
+			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
+			z-index: -1;
+			height: 536px;
+			width: 633px;
+			top: -100px;
+			left: auto;
+			right: -100px;
 		}
 	}
 </style>

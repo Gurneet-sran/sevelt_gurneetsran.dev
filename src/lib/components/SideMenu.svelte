@@ -4,11 +4,12 @@
 	import { onMount } from 'svelte';
 	import Nav from './Nav.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
+	import AvatarCard from './AvatarCard.svelte';
 
-	export let isOpen = false;
-	let isClosing = false;
-	let menuElement: HTMLDivElement;
-	let closeButton: HTMLButtonElement;
+	let { isOpen = $bindable() } = $props<{ isOpen: boolean }>();
+	let isClosing = $state(false);
+	let menuElement: HTMLDivElement | null = $state(null);
+	let closeButton: HTMLButtonElement | null = $state(null);
 
 	onMount(() => {
 		if (isOpen) {
@@ -16,12 +17,14 @@
 		}
 	});
 
-	$: if (isOpen) {
-		// Focus the close button when menu opens
-		setTimeout(() => {
-			closeButton?.focus();
-		}, 100);
-	}
+	$effect(() => {
+		if (isOpen) {
+			// Focus the close button when menu opens
+			setTimeout(() => {
+				closeButton?.focus();
+			}, 100);
+		}
+	});
 
 	function closeMenu() {
 		isClosing = true;
@@ -44,39 +47,54 @@
 	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} />
 
 {#if isOpen}
 	<div
 		class="sidemenu-overlay"
-		on:click={closeMenu}
-		on:keydown={handleKeydown}
+		onclick={closeMenu}
+		onkeydown={handleKeydown}
 		role="dialog"
 		aria-modal="true"
 		aria-label="Navigation menu"
+		tabindex="-1"
 		transition:fade={{ duration: 450 }}
 	>
 		<div
 			class="sidemenu"
 			class:closing={isClosing}
-			on:click|stopPropagation
+			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
 			role="menu"
+			tabindex="-1"
 			bind:this={menuElement}
 		>
 			<div class="sidemenu__header">
 				<button
 					class="sidemenu__close-btn"
-					on:click={closeMenu}
-					on:keydown={handleKeydown}
+					onclick={closeMenu}
+					onkeydown={handleKeydown}
 					aria-label="Close menu"
 					bind:this={closeButton}
+					type="button"
 				>
 					<span class="icon icon--close" aria-hidden="true"></span>
 				</button>
 			</div>
 
 			<div class="sidemenu__content">
-				<ThemeToggle />
+				<!-- <ThemeToggle /> -->
+				<AvatarCard />
+				<h2 class="sidemenu__subtitle">Tags</h2>
+				<ul class="sidemenu__list">
+					<li>ReactJS</li>
+					<li>Svelte</li>
+					<li>Typescript</li>
+					<li>CSS3</li>
+					<li>HTML5</li>
+					<li>SASS</li>
+					<li>TailwindCSS</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -115,7 +133,7 @@
 	.sidemenu__header {
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 2rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.sidemenu__close-btn {
@@ -134,6 +152,32 @@
 
 	.sidemenu__content {
 		margin-top: 1rem;
+	}
+
+	.sidemenu__subtitle {
+		margin-top: 4rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-text-tertiary);
+		text-align: center;
+	}
+
+	.sidemenu__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		> li {
+			padding: 0.5rem 1rem;
+			background-color: var(--color-background-secondary);
+			color: var(--color-text);
+			transition: box-shadow 0.3s ease;
+			cursor: pointer;
+		}
+		> li:hover {
+			box-shadow: var(--shadow-md);
+		}
 	}
 
 	@keyframes slideIn {
