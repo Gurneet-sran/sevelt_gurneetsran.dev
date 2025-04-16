@@ -4,26 +4,26 @@
 </script>
 
 <section {id} class="section">
-	<h2 class="section-title">{title}</h2>
-	<div class="section-content">
+	<h2 class="section__title">{title}</h2>
+	<div class="section__content">
 		<slot />
 	</div>
 </section>
 
 <style>
 	.section {
-		padding: 4rem 2rem;
+		padding: 2.25rem 1.25rem;
 		scroll-margin-top: 5rem;
 	}
 
-	.section-title {
+	.section__title {
 		font-size: 2rem;
 		margin-bottom: 2rem;
 		text-align: center;
 		color: var(--color-text);
 	}
 
-	.section-content {
+	.section__content {
 		max-width: 1200px;
 		margin: 0 auto;
 	}

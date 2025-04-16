@@ -24,6 +24,11 @@
 	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 	--page-grid-template: 30% 1fr 40px;
+
+	/* Screen breakpoints */
+	--screen-lg: 992px;
+	--screen-md: 768px;
+	--screen-sm: 576px;
 }
 
 /* Dark theme variables */
