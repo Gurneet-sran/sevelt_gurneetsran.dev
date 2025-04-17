@@ -83,7 +83,7 @@
 			</div>
 
 			<div class="sidemenu__content">
-				<!-- <ThemeToggle /> -->
+				<ThemeToggle />
 				<AvatarCard />
 				<h2 class="sidemenu__subtitle">Tags</h2>
 				<ul class="sidemenu__list">
@@ -118,7 +118,7 @@
 		width: 100%;
 		max-width: 300px;
 		height: 100%;
-		background-color: var(--color-background);
+		background-color: var(--md-sys-color-background);
 		box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 		z-index: 1001;
 		padding: 1rem;
@@ -141,13 +141,13 @@
 		border: none;
 		cursor: pointer;
 		padding: 0.5rem;
-		color: var(--color-text);
+		color: var(--md-sys-color-on-surface);
 		font-size: 1.5rem;
 		transition: color 0.3s ease;
 	}
 
 	.sidemenu__close-btn:hover {
-		color: var(--color-primary);
+		color: var(--md-sys-color-primary);
 	}
 
 	.sidemenu__content {
@@ -157,7 +157,7 @@
 	.sidemenu__subtitle {
 		margin-top: 4rem;
 		margin-bottom: 1.5rem;
-		color: var(--color-text-tertiary);
+		color: var(--md-sys-color-on-surface-tertiary);
 		text-align: center;
 	}
 
@@ -170,13 +170,13 @@
 		flex-wrap: wrap;
 		> li {
 			padding: 0.5rem 1rem;
-			background-color: var(--color-background-secondary);
-			color: var(--color-text);
-			transition: box-shadow 0.3s ease;
+			background-color: var(--md-sys-color-surface-container-high);
+			color: var(--md-sys-color-on-surface);
+			/* transition: box-shadow 0.3s ease; */
 			cursor: pointer;
 		}
 		> li:hover {
-			box-shadow: var(--shadow-md);
+			box-shadow: var(--md-elevation-level2);
 		}
 	}
 

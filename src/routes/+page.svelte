@@ -131,13 +131,12 @@
 		padding-top: 5rem; /* Space for fixed header */
 	}
 
-	.about-content,
+	/* .about-content,
 	.experience-content,
 	.interests-content,
 	.skills-content {
-		color: var(--color-text);
-		line-height: 1.875em;
-	}
+		color: var(--color-foreground);
+	} */
 
 	.interests-content {
 		ul {
@@ -150,7 +149,7 @@
 			}
 		}
 		.icon {
-			color: var(--color-primary-dark);
+			color: var(--md-sys-color-primary);
 			font-size: 1.7em;
 			margin-right: 0.25em;
 		}
@@ -182,7 +181,7 @@
 		.page-grid::before {
 			content: '';
 			inset: 0;
-			background: var(--color-background);
+			background: var(--md-sys-color-surface-container-high);
 			clip-path: polygon(0 87.7%, 91.4% 67.8%, 22.8% 0, 12.1% 0, 0 13.7%);
 			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
 			z-index: -1;
@@ -197,7 +196,7 @@
 			content: '';
 			position: fixed;
 			inset: 0;
-			background: var(--color-primary);
+			background: var(--md-sys-color-primary);
 			clip-path: polygon(0 0, 100% 0, 100% 100%);
 			box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1);
 			z-index: -1;

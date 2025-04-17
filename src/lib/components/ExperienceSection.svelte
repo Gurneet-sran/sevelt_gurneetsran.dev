@@ -160,9 +160,8 @@
 		bottom: 0;
 		width: 2px;
 		content: '';
-		opacity: 0.5;
 		position: absolute;
-		background: var(--color-primary-dark);
+		background: var(--md-sys-color-primary);
 	}
 
 	.experience__box {
@@ -179,7 +178,9 @@
 		width: 4px;
 		height: 4px;
 		border-radius: 50%;
-		background-color: var(--color-text);
+		/* TODO */
+		background-color: var(--md-sys-color-on-surface);
+		/* border: 1px solid var(--md-sys-color-outline); */
 	}
 
 	.experience__box:last-child:after {
@@ -189,11 +190,12 @@
 		width: 2px;
 		content: '';
 		position: absolute;
-		background-color: var(--color-surface);
+		background-color: var(--md-sys-color-surface-dim);
 	}
 
 	.experience__date {
-		background: var(--color-primary-dark);
+		background: var(--md-sys-color-primary);
+		color: var(--md-sys-color-on-primary);
 		left: -20px;
 		width: 117px;
 		letter-spacing: 0;
@@ -216,7 +218,7 @@
 		border-bottom: 11px solid transparent !important;
 		border-left: 0 solid transparent !important;
 		border-right: 7px solid transparent;
-		border-color: var(--color-primary-dark);
+		border-color: var(--md-sys-color-primary);
 	}
 
 	.experience__title {
@@ -260,7 +262,7 @@
 			border-top: 16px solid transparent !important;
 			border-bottom: 16px solid transparent !important;
 			border-right: 10px solid transparent !important;
-			border-left: 10px solid var(--color-primary-dark) !important;
+			border-left: 10px solid var(--md-sys-color-primary) !important;
 		}
 	}
 </style>

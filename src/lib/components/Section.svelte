@@ -25,13 +25,15 @@
 	.section__title {
 		font-size: 2rem;
 		margin-bottom: 3.12rem;
-		color: var(--color-text);
+		/* color: var(--md-sys-color-on-surface); */
 		text-transform: uppercase;
 	}
 
 	.section__content {
 		max-width: 1200px;
 		margin: 0 auto;
+		color: var(--md-sys-color-on-surface);
+		line-height: 1.875em;
 	}
 
 	/* @media (max-width: 768px) {
@@ -47,7 +49,7 @@
 	/* Desktop and laptop layout */
 	@media (min-width: 992px) {
 		.section {
-			background-color: var(--color-background);
+			background-color: var(--md-sys-color-surface-container);
 		}
 	}
 </style>

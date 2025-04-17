@@ -35,7 +35,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background-color: var(--color-primary);
+		background-color: var(--md-sys-color-primary);
+		color: var(--md-sys-color-on-primary);
 		padding: 2rem 1rem 1.5rem;
 	}
 
@@ -54,11 +55,13 @@
 
 	.avatar-card__name {
 		text-transform: uppercase;
+		color: var(--md-sys-color-on-primary);
+
 		/* font-size: 1.40em; */
 	}
 
 	.avatar-card__title {
-		color: var(--color-text-secondary);
+		color: var(--md-sys-color-on-surface-secondary);
 	}
 
 	.avatar-card__social-list {
@@ -68,12 +71,18 @@
 	}
 	.avatar-card__social-link {
 		font-size: 1.5rem;
+		transition: var(--hover-transition);
+		&:hover {
+			color: var(--md-sys-color-primary-container);
+		}
 	}
 
 	/* Desktop and laptop layout */
 	@media (min-width: 992px) {
 		.avatar-card {
 			align-self: self-start;
+			position: sticky;
+			top: 0;
 		}
 	}
 </style>

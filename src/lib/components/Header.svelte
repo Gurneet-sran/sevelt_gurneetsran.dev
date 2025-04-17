@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SideMenu from './SideMenu.svelte';
 	import Nav from './Nav.svelte';
+	import ThemeToggle from './ThemeToggle.svelte';
 
 	let isMenuOpen = false;
 
@@ -18,15 +19,15 @@
 				</div>
 			</div>
 
-			<!-- <div class="header__col header__col--nav">
-					<div class="header__nav header__nav--desktop">
-						<Nav />
-					</div>
-				</div> -->
+			<div class="header__col header__col--nav">
+				<div class="header__nav header__nav--desktop">
+					<ThemeToggle />
+				</div>
+			</div>
 
 			<div class="header__col">
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<button class="header__menu-btn" on:click={toggleMenu} aria-label="Toggle menu">
+				<button class="header__menu-btn" onclick={toggleMenu} aria-label="Toggle menu">
 					<span class="icon icon--menu"></span>
 				</button>
 			</div>
@@ -77,7 +78,7 @@
 
 	.header__logo {
 		font-size: 1.5rem;
-		color: var(--color-primary);
+		color: var(--md-sys-color-primary);
 	}
 
 	.header__logo-text {
@@ -100,11 +101,11 @@
 		border: none;
 		border-radius: 4px;
 		cursor: pointer;
-		transition: all 0.3s ease;
+		transition: var(--hover-transition);
 		font-size: 2rem;
-		color: var(--color-text);
+		color: var(--md-sys-color-on-surface);
 		&:hover {
-			color: var(--color-primary);
+			color: var(--md-sys-color-primary-container);
 		}
 	}
 
@@ -156,7 +157,7 @@
 			font-size: 2rem;
 		}
 		.header__menu-btn {
-			background: var(--color-background-secondary);
+			background: var(--md-sys-color-background-secondary);
 			border-radius: 50%;
 			padding: 10px;
 			font-size: 2.5em;
