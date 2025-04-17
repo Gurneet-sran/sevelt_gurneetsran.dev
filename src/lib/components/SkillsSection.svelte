@@ -98,7 +98,7 @@
 
 	.skills__subtitle {
 		font-weight: 300;
-		color: var(--color-text-tertiary);
+		color: var(--md-sys-color-on-surface-variant);
 		margin-bottom: 2rem;
 		font-size: 1.25rem;
 	}
@@ -144,7 +144,7 @@
 			font-family: 'icomoon';
 			position: absolute;
 			left: -1.75rem;
-			color: var(--color-primary);
+			color: var(--md-sys-color-primary);
 		}
 	}
 

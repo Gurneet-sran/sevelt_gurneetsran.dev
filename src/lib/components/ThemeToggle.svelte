@@ -11,6 +11,7 @@
 			width="768"
 			height="768"
 			viewBox="0 0 768 768"
+			style="fill: var(--md-sys-color-on-secondary)"
 		>
 			<g id="icomoon-ignore"> </g>
 			<path
@@ -25,6 +26,7 @@
 			width="768"
 			height="768"
 			viewBox="0 0 768 768"
+			style="fill: var(--md-sys-color-on-secondary)"
 		>
 			<g id="icomoon-ignore"> </g>
 			<path
@@ -36,8 +38,8 @@
 
 <style>
 	.theme-toggle {
-		background: var(--color-surface);
-		border: 1px solid var(--color-border);
+		background: var(--md-sys-color-secondary);
+		border: 1px solid var(--md-sys-color-on-secondary);
 		border-radius: 50%;
 		width: 2.5rem;
 		height: 2.5rem;
@@ -47,6 +49,11 @@
 		cursor: pointer;
 		transition: all 0.3s ease;
 		box-shadow: var(--shadow-sm);
+		display: none;
+		> svg {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
 	}
 
 	.theme-toggle:hover {
@@ -54,8 +61,8 @@
 		box-shadow: var(--shadow-md);
 	}
 
-	.theme-toggle i {
+	/* .theme-toggle i {
 		font-size: 1.25rem;
-		color: var(--color-text);
-	}
+		color: var(--md-sys-color-on-surface);
+	} */
 </style>

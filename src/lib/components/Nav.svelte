@@ -46,7 +46,7 @@
 		display: flex;
 		padding: 0.75rem 1rem;
 		flex-direction: row;
-		background-color: var(--color-background);
+		background-color: var(--md-sys-color-background);
 	}
 
 	.nav__avatar-link {
@@ -93,15 +93,14 @@
 	.nav__link {
 		display: flex;
 		align-items: center;
-		color: var(--color-text);
+		color: var(--md-sys-color-on-surface);
 		text-decoration: none;
 		border-radius: 0.5rem;
-		transition: all 0.3s ease;
+		transition: var(--hover-transition);
 	}
 
 	.nav__link:hover {
-		background-color: var(--color-shade);
-		color: var(--color-primary);
+		color: var(--md-sys-color-primary-container);
 	}
 
 	.nav__icon {

@@ -23,7 +23,7 @@
 		<svg viewBox="0 0 100 100" style="display: block; width: 100%;">
 			<path
 				d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95"
-				stroke="var(--color-primary)"
+				stroke="var(--md-sys-color-primary)"
 				stroke-width="5"
 				fill-opacity="0"
 				style="stroke-dasharray: {circumference}, {circumference}; stroke-dashoffset: {offset};"
@@ -57,7 +57,7 @@
 
 	.progress__title {
 		font-size: 0.85em;
-		color: var(--color-text-secondary);
+		color: var(--md-sys-color-on-surface-secondary);
 		text-align: center;
 	}
 

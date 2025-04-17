@@ -36,7 +36,7 @@
 	.progress__title {
 		/* margin-bottom: 0.5rem; */
 		font-size: 0.9rem;
-		color: var(--color-text-secondary);
+		color: var(--md-sys-color-on-surface-secondary);
 		width: 100%;
 		font-weight: 700;
 	}
@@ -58,11 +58,11 @@
 		height: 0.8em;
 		border-radius: 50%;
 		background-color: transparent;
-		border: 1px solid var(--color-primary);
+		border: 1px solid var(--md-sys-color-primary);
 	}
 
 	.progress__bullet--filled {
-		background-color: var(--color-primary);
+		background-color: var(--md-sys-color-primary);
 	}
 
 	.progress__text {
@@ -71,6 +71,6 @@
 	}
 
 	.progress__text--muted {
-		color: var(--color-text-tertiary);
+		color: var(--md-sys-color-on-surface-tertiary);
 	}
 </style>
