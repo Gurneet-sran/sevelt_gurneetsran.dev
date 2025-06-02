@@ -3,7 +3,16 @@
 	import '$lib/styles/variables.css';
 	import '$lib/styles/icons.css';
 	import type { Snippet } from 'svelte';
+	import { theme } from '$lib/stores/theme';
+	import { onDestroy } from 'svelte';
+
 	let { children } = $props<{ children: Snippet }>();
+
+	onDestroy(() => {
+		if (theme.cleanup) {
+			theme.cleanup();
+		}
+	});
 </script>
 
 {@render children?.()}

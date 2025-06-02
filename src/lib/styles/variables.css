@@ -1,5 +1,7 @@
 /* prettier-ignore */
 :root {
+	color-scheme: light dark;
+
 	--md-sys-color-primary: rgb(0 107 95);
 	--md-sys-color-surface-tint: rgb(0 107 95);
 	--md-sys-color-on-primary: rgb(255 255 255);/*Text and icons against primary.*/
@@ -93,7 +95,7 @@
 	--shadow-md: 0 4px 6px -1px var(--md-sys-color-surface-container-lowest);
 	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
-	--page-grid-template: 30% 1fr 40px;
+	--page-grid-template: 25% 1fr 40px;
 
 	/* Screen breakpoints */
 	--screen-lg: 992px;
@@ -102,6 +104,7 @@
 }
 
 /* Dark theme variables */
+
 .dark {
 	--md-sys-color-primary: rgb(130 213 199);
 	--md-sys-color-surface-tint: rgb(130 213 199);

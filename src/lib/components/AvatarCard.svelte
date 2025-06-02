@@ -56,7 +56,7 @@
 	.avatar-card__name {
 		text-transform: uppercase;
 		color: var(--md-sys-color-on-primary);
-
+		white-space: nowrap;
 		/* font-size: 1.40em; */
 	}
 
@@ -82,7 +82,7 @@
 		.avatar-card {
 			align-self: self-start;
 			position: sticky;
-			top: 0;
+			top: 0.75rem;
 		}
 	}
 </style>

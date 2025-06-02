@@ -130,6 +130,9 @@
 			flex-direction: column;
 			background: transparent;
 			margin-left: -2rem;
+			position: sticky;
+			top: 0;
+			align-self: start;
 		}
 		.nav__list {
 			flex-direction: column;
